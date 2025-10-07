@@ -27,7 +27,7 @@ public class Day03_CarRentalTest {
     // Create the object of the page class so that we can reach to the web elements that we located and stored there
     CarRental_HomePage carRentalHomePage;
 
-    @Test
+    @Test (groups = "Regression Test")
     public void carRentalTest1(){
         carRentalHomePage = new CarRental_HomePage();
 
@@ -83,6 +83,7 @@ public class Day03_CarRentalTest {
         String dropdownText = carRentalHomePage.profileDropdown.getText();
         assertEquals("a a", dropdownText);
 
+        Driver.closeDriver();
 
     }
 

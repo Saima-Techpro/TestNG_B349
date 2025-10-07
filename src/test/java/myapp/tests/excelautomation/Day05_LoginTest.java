@@ -4,6 +4,7 @@ import myapp.pages.DataTablesPage;
 import myapp.utilities.Driver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -15,17 +16,16 @@ public class Day05_LoginTest {
     protected WebDriver driver;
     DataTablesPage dataTablesPage;
 
+
     @BeforeMethod
     public void setUp(){
         driver = Driver.getDriver();
         //When user go to https://editor.datatables.net/
         driver.get("https://editor.datatables.net/");
-
         dataTablesPage = new DataTablesPage();
-
     }
 
-    @Test
+    @Test (groups = "Regression Test")
     public void loginTestWithoutExcel(){
 //Click on the new button
         dataTablesPage.newButton.click();

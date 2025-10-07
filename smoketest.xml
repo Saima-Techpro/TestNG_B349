@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite" verbose="1">
+    <test name="Smoke Test">
+        <packages>
+            <package name="myapp.tests.smoketests"></package>
+        </packages>
+    </test>
+</suite>
+
+
+<!-- NOTES:
+    1. xml files are used to RUN existing test cases
+    2. xml file can be used to run test at any level=> suite > test > packages > groups > classes > methods
+    3. verbose is OPTIONAL => it is only the amount of info that you see on the console after the test run
+    4. SAVE THE XML FILE FIRST, then run it
+    5. If the path is not correct, we see 'No Tests were found' error
+
+-->

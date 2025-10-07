@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Run all Methods" verbose="2">
+    <test name="Run Methods" >
+        <classes>
+
+            <class name="myapp.tests.dataprovider.Day06_DataProvider2">
+                <methods>
+                    <include name="loginTestWithDataProvider"></include>
+                </methods>
+            </class>
+
+            <class name="myapp.tests.smoketests.Day04_OrangeHRM_LoginTestDynamic">
+                <methods>
+                    <include name="orangeHRMLoginTest2"></include>
+                </methods>
+            </class>
+
+            <class name="myapp.tests.topics.Day02_Assertions">
+                <methods>
+                    <exclude name="hardAssertTest"></exclude>
+                    <exclude name="javaAssertTest"></exclude>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

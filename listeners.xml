@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    
+    <listeners>
+        <listener class-name="myapp.utilities.ListenersUtils"></listener>
+    </listeners>
+
+    <test verbose="2" preserve-order="true"
+          name="Listeners Test">
+        <classes>
+            <class name="myapp.tests.listeners.Day06_ListenerTest">
+                <methods>
+                    <include name="listenersTest1"/>
+                    <include name="listenersTest2"/>
+                    <include name="listenersTest3"/>
+                    <include name="listenersTest4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+<!-- Use Listeners through xml files - RECOMMENDED
+
+1. Because it's less work as compared to going to each class and adding @Listeners annotation
+2. Because xml files show the real behaviour of Listeners for failing test cases
+
+ -->

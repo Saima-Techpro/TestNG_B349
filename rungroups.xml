@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Suite" verbose="2">
+    
+    <test name="Minor Regression Test" >
+        
+        <groups>
+            <run>  <!--  use this tag 'Regression Test' with all the tests you want to run-->
+                 <include name="Regression Test" ></include>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="myapp.tests.*"></package>
+        </packages>
+    </test>
+    
+</suite>
+
+
+<!-- This xml will not run the tests from group level with current configuration
+We have to change the Page set up, which we are not doing currently. -->
