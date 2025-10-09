@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Adding TestNG Reports">
+    <test verbose="2" preserve-order="true"
+          name="Adding TestNG Reports">
+        <classes>
+            <class name="myapp.tests.extentreports.Day07_OrangeHRM_LoginTestWithTestNGReports">
+                <methods>
+                    <include name="orangeHRMLoginTest1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

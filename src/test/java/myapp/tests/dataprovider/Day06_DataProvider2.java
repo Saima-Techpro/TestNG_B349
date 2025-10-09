@@ -41,7 +41,7 @@ Then verify the name field contains first name
 
     }
 
-    @Test ( dataProvider = "userData" , dataProviderClass = DataProviderUtils.class)
+    @Test (dataProvider = "userData" , dataProviderClass = DataProviderUtils.class )
     public void loginTestWithDataProvider(
             String firstName ,
             String lastName ,

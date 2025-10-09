@@ -1,4 +1,4 @@
-package myapp.tests.smoketests;
+package myapp.tests.extentreports;
 
 import myapp.pages.OrangeHRM_HomePage;
 import myapp.pages.OrangeHRM_LoginPage;
@@ -14,7 +14,23 @@ import static myapp.utilities.WaitUtils.waitFor;
 import static myapp.utilities.WaitUtils.waitForVisibility;
 import static org.testng.Assert.assertTrue;
 
-public class Day04_OrangeHRM_LoginTestDynamic {
+public class Day07_OrangeHRM_LoginTestWithTestNGReports {
+
+
+    /*
+    NOTES about TesTNG Reports:
+    1. Created this class
+    2. Generated testng.xml file using 'Create XML file' plugin by right-clicking on the class
+    3. Renamed it reports.xml file
+    4. From the top menu, click on Run button > edit configurations
+    5. A new window open up, make sure reports.xml is visible and selected
+    6. Click on Listeners and add 4 listeners
+    7. Apply and OK
+    8. Run the test again from reports.xml file
+    9. A new report should be available in test-output folder
+    10. Open the reports in browser
+     */
+
 
     /*
     When user navigates to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login homepage
@@ -24,6 +40,7 @@ public class Day04_OrangeHRM_LoginTestDynamic {
     Verify the login is successful
     And User logs out
     Verify the logout is successful
+
      */
 
     protected WebDriver driver;
@@ -68,23 +85,6 @@ public class Day04_OrangeHRM_LoginTestDynamic {
 
 //        Verify the logout is successful
         assertTrue(orangeHRMLoginPage.loginHeader.isDisplayed());
-
-    }
-
-    @Test
-    public void orangeHRMLoginTest2(){
-//        And User enters Username
-//        And User enters password
-//        And User clicks on Login button
-
-      orangeHRMLoginPage.login(ConfigReader.getProperty("orangehrm_username"), ConfigReader.getProperty("orangehrm_password"));
-        waitForVisibility(orangeHRMHomePage.dashboardHeader, 5);
-//        Verify the login is successful
-        verifyElementDisplayed(orangeHRMHomePage.dashboardHeader);
-//        And User logs out
-      orangeHRMHomePage.logout();
-//        Verify the logout is successful
-        verifyElementDisplayed(orangeHRMLoginPage.loginHeader);
 
     }
 

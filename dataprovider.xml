@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Day06_DataProvider2"  parallel="methods" thread-count="4">
+    <test verbose="2" preserve-order="true"
+          name="All tests from Day06_DataProvider2 class">
+        <classes>
+            <class name="myapp.tests.dataprovider.Day06_DataProvider2"></class>
+            <class name="myapp.tests.smoketests.Day04_OrangeHRM_LoginTestDynamic"></class>
+        </classes>
+    </test>
+</suite>

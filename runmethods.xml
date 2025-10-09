@@ -15,12 +15,7 @@
                 </methods>
             </class>
 
-            <class name="myapp.tests.topics.Day02_Assertions">
-                <methods>
-                    <exclude name="hardAssertTest"></exclude>
-                    <exclude name="javaAssertTest"></exclude>
-                </methods>
-            </class>
+            <class name="myapp.tests.excelautomation.Day05_LoginTest" ></class>
 
         </classes>
     </test>
